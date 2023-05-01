@@ -2,6 +2,7 @@ package es.upm.dit.isst.citas_api.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Entity
@@ -14,7 +15,7 @@ public class Paciente {
     private LocalDate fecha_nacimiento;
     private String ntarjeta;
     private Boolean presente;
-    private boolean llamado;
+    private LocalDateTime llamado;
     
     // Constructor sin argumentos
     public Paciente() {
@@ -22,7 +23,7 @@ public class Paciente {
     
     // Constructor con argumentos
     public Paciente(String idpaciente, String dni, String nombre, LocalDate fecha_nacimiento, String ntarjeta,
-                    Boolean presente, Boolean llamado) {
+                    Boolean presente, LocalDateTime llamado) {
         this.idpaciente = idpaciente;
         this.dni = dni;
         this.nombre = nombre;
@@ -81,11 +82,11 @@ public class Paciente {
         this.presente = presente;
     }
     // Getter y setter idpaciente
-    public Boolean getLlamado() {
+    public LocalDateTime getLlamado() {
         return this.llamado;
     }
 
-    public void setLlamado(boolean llamado) {
+    public void setLlamado(LocalDateTime llamado) {
         this.llamado = llamado;
     }
     // Método toString
