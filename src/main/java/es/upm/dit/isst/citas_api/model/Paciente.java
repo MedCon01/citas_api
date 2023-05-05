@@ -16,6 +16,7 @@ public class Paciente {
     private String ntarjeta;
     private Boolean presente;
     private LocalDateTime llamado;
+    private int consultallamada;
     
     // Constructor sin argumentos
     public Paciente() {
@@ -23,7 +24,7 @@ public class Paciente {
     
     // Constructor con argumentos
     public Paciente(String idpaciente, String dni, String nombre, LocalDate fecha_nacimiento, String ntarjeta,
-                    Boolean presente, LocalDateTime llamado) {
+                    Boolean presente, LocalDateTime llamado, int consultaLlamada) {
         this.idpaciente = idpaciente;
         this.dni = dni;
         this.nombre = nombre;
@@ -31,6 +32,7 @@ public class Paciente {
         this.ntarjeta = ntarjeta;
         this.presente = presente;
         this.llamado = llamado;
+        this.consultallamada = consultaLlamada;
     }
     
     // Getter y setter idpaciente
@@ -89,6 +91,15 @@ public class Paciente {
     public void setLlamado(LocalDateTime llamado) {
         this.llamado = llamado;
     }
+
+    // Getter y setter consultaLlamada
+    public int getConsultallamada() {
+        return this.consultallamada;
+    }
+
+    public void setConsultallamada(int consultallamada) {
+        this.consultallamada = consultallamada;
+    }
     // Método toString
     @Override
     public String toString() {
@@ -100,6 +111,7 @@ public class Paciente {
                 ", ntarjeta='" + ntarjeta + '\'' +
                 ", presente=" + presente +
                 ", llamado=" + llamado +
+                ", consultallamada=" + consultallamada + 
                 '}';
     }
     

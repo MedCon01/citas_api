@@ -53,6 +53,7 @@ ResponseEntity<Paciente> update(@RequestBody Paciente newPaciente, @PathVariable
         paciente.setNtarjeta(newPaciente.getNtarjeta());
         paciente.setPresente(newPaciente.getPresente());
         paciente.setLlamado(newPaciente.getLlamado());
+        paciente.setConsultallamada(newPaciente.getConsultallamada());
         pacienteRepository.save(paciente);
         return ResponseEntity.ok().body(paciente);
         }).orElse(new ResponseEntity<Paciente>(HttpStatus.NOT_FOUND));
