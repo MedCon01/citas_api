@@ -27,8 +27,8 @@ public class Cita {
     public Cita(){}
 
     // Getter y Setter id
-    public int getId() {
-        return id;
+    public Integer getId() {
+        return this.id;
     }
 
     public void setId(int id) {

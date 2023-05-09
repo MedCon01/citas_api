@@ -1,6 +1,9 @@
 package es.upm.dit.isst.citas_api.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import net.bytebuddy.implementation.bind.annotation.Default;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -24,7 +27,7 @@ public class Paciente {
     
     // Constructor con argumentos
     public Paciente(String idpaciente, String dni, String nombre, LocalDate fecha_nacimiento, String ntarjeta,
-                    Boolean presente, LocalDateTime llamado, int consultaLlamada) {
+                    Boolean presente, LocalDateTime llamado, int consultallamada) {
         this.idpaciente = idpaciente;
         this.dni = dni;
         this.nombre = nombre;
@@ -32,7 +35,7 @@ public class Paciente {
         this.ntarjeta = ntarjeta;
         this.presente = presente;
         this.llamado = llamado;
-        this.consultallamada = consultaLlamada;
+        this.consultallamada = consultallamada;
     }
     
     // Getter y setter idpaciente
